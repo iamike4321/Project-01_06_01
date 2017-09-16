@@ -16,15 +16,13 @@ function validateRequired() { // checks the inputs for blank field
   var fieldsetValidity = true;
   var currentElement;
 
-  try {
-
+  try { // loops to find the elements and then finds if there is an empty input tag 
     for (var i = 0; i < elementCount; i++) {
       currentElement = usrInput[i]
-
       if (currentElement.value === "") {
         currentElement.style.background = "rgb(241, 76, 76)";
         fieldsetValidity = false;
-      } else {
+      } else { // if there is someting in the fieldset then sets the background to white
         currentElement.style.background = "white";
       }
     }
